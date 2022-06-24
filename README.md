@@ -8,4 +8,5 @@ Configs included:
 1. Dwm - Based wm.
 
 To install, cd to dwm and run install.sh
+
 You can edit fonts.h to switch to the font you installed incase you don't have Hack Nerd Font and / or FontAwesome.

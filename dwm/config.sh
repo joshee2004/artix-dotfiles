@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 # Author: Joshua Royar
 # Description: Config script for my fork of dwm
@@ -16,6 +16,6 @@ config() {
     '3') vim config/keys.h
     ;;
     esac
-    source install.sh -i
+    ./install.sh -i
 }
 config

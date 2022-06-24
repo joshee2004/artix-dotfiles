@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 # Author: Joshua Royar
 # Description: Install script for my fork of dwm
@@ -14,7 +14,7 @@ main() {
             'c') ./config.sh
             ;;
             'i') make
-                 sudo make clean install
+                 su -c "make clean install" root
                  rm ~/.xsession
                  echo "exec dwm" >> ~/.xsession
                  echo "Install complete! Reboot for changes to take effect"
@@ -26,7 +26,7 @@ main() {
     else 
         echo "Welcome to dwm installer!"
         echo "Installing dependencies... (ONLY WORKS ON ARCH BASED DISTROS!)" 
-        sudo pacman -S --needed base-devel libx11 libxft libxinerama freetype2 fontconfig maim xclip rofi
+        su -c "pacman -S --needed base-devel libx11 libxft libxinerama freetype2 fontconfig maim xclip rofi" root
         echo "Installed all dependencies, time to configure dwm"
         chmod +rwx config.sh && ./config.sh
     fi
