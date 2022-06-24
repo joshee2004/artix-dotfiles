@@ -26,7 +26,7 @@ main() {
     else 
         echo "Welcome to dwm installer!"
         echo "Installing dependencies... (ONLY WORKS ON ARCH BASED DISTROS!)" 
-        sudo pacman -S --needed base-devel libx11 libxft libxinerama freetype2 fontconfig
+        sudo pacman -S --needed base-devel libx11 libxft libxinerama freetype2 fontconfig maim xclip rofi
         echo "Installed all dependencies, time to configure dwm"
         chmod +rwx config.sh && ./config.sh
     fi
