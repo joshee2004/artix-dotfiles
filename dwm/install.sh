@@ -17,6 +17,7 @@ main() {
                  su -c "make clean install" root
                  rm ~/.xsession
                  echo "exec dwm" >> ~/.xsession
+                 chmod +rwx .xsession
                  echo "Install complete! Reboot for changes to take effect"
             ;;
             'q') echo "Quitting..."
