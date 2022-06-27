@@ -9,12 +9,9 @@ config() {
     echo "Press 3 to edit keybinds"
     read choice
     case "$choice" in
-    '1') vim config/theme.h
-    ;;
-    '2') vim config/layout.h
-    ;;
-    '3') vim config/keys.h
-    ;;
+    '1') vim config/theme.h ;;
+    '2') vim config/layout.h ;;
+    '3') vim config/keys.h ;;
     esac
     ./install.sh -i
 }
