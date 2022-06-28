@@ -2,14 +2,14 @@
 ## Info
 Dotfiles for my artix rice. Includes-
 1. [x] Xorg server, video driver and basic fonts
-2. [] Light DM (login shell)
-3. [] DWM (minimal window manager)
-    - [] custom-made status bar
-    - [] patches
+2. [ ] Light DM (login shell)
+3. [ ] DWM (minimal window manager)
+    - [ ] custom-made status bar
+    - [ ] patches
         1. To be added
-4. [] Rofi (application launcher)
-5. [] Alacritty (terminal)
-6. [] Neovim (text editor)
+4. [ ] Rofi (application launcher)
+5. [ ] Alacritty (terminal)
+6. [ ] Neovim (text editor)
 7. [x] Pfetch (for system info)
 8. [x] CMatrix (cool matrix tool)
 9. [x] Maim and Xclip (screenshot tool)
@@ -24,7 +24,7 @@ Feel free to fork my project to match your distro if you don't use one of the cu
 ## Installation
 1. Make sure you have git installed. Clone the repository using git clone:
     `git clone https://github.com/joshee2004/artix-dotfiles`
-[] TODO ~~2. cd to artix-dotfiles and run install.sh:~~
+2. [ ] TODO ~~cd to artix-dotfiles and run install.sh:~~
     ~~`cd artix-dotfiles && ./install.sh`~~
 2. As my project is still being developed, there is no direct install as of now. But I do have a working install script for dwm. cd to dwm and run install.sh:
     `cd artix-dotfiles/dwm && ./install.sh`
@@ -36,6 +36,7 @@ Feel free to fork my project to match your distro if you don't use one of the cu
     - Press c to return back to configuration menu
     - Press i to save changes and install dwm
     - Press q to quit the installer
+    
     ![dwm-install-3](readme/dwm-install-3.png)
 6. Reboot after installing dwm to use it.
 NOTE: My dotfiles does not include alacritty as of now, and will be added in a future update. So to use the terminal after installing dwm, make sure you install alacritty using your favorite package manager.
