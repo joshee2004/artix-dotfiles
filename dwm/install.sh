@@ -32,11 +32,11 @@ main() {
         ls /usr/bin/emerge && distro=gentoo
         # Execute installation commands accordingly
         case $distro in
-            "debian") su -c "apt install xorg picom dwm alacritty rofi maim xclip feh" root ;;
-            "rh") su -c "dnf install xorg picom dwm alacritty rofi maim xclip feh" root ;;
-            "void") su -c "xbps-install xorg picom dwm alacritty rofi maim xclip feh" root ;;
-            "arch") su -c "pacman -S --needed xorg picom dwm alacritty rofi maim xclip feh" root ;;
-            "gentoo") su -c "emerge --ask xorg picom dwm alacritty rofi maim xclip feh" root ;;
+            "debian") su -c "apt install xorg picom dwm alacritty rofi vim maim xclip pfetch cmatrix feh" root ;;
+            "rh") su -c "dnf install xorg picom dwm alacritty rofi vim maim xclip pfetch cmatrix feh" root ;;
+            "void") su -c "xbps-install xorg picom dwm alacritty rofi vim maim xclip pfetch cmatrix feh" root ;;
+            "arch") su -c "pacman -S --needed xorg picom dwm alacritty rofi vim maim xclip pfetch cmatrix feh" root ;;
+            "gentoo") su -c "emerge --ask xorg picom dwm alacritty rofi vim maim xclip pfetch cmatrix feh" root ;;
         esac
         echo "Installed all dependencies, time to configure dwm"
         chmod +rwx config.sh && ./config.sh
