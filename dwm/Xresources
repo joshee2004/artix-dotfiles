@@ -2,27 +2,27 @@
 
 ! Color scheme for dwm
 
-dwm.normfgcolor:    "#bbbbbb"
-dwm.normbgcolor:    "#000000"
-dwm.normbordercolor:"#000000"
-dwm.selfgcolor:     "#eeeeee"
-dwm.selbgcolor:     "#ff0000"
-dwm.selbordercolor: "#000000"
-dwm.tagsnormfg:     "#bbbbbb"
-dwm.tagsnormbg:     "#ff0000"
-dwm.tagsnormborder: "#000000"
-dwm.tagsselfg:      "#eeeeee"
-dwm.tagsselbg:      "#000000"
-dwm.tagsselborder:  "#000000"
-dwm.infonormfg:     "#bbbbbb"
-dwm.infonormbg:     "#000000"
-dwm.infonormborder: "#000000"
-dwm.infoselfg:      "#eeeeee"
-dwm.infoselbg:      "#ff0000"
-dwm.infoselborder:  "#000000"
-dwm.statusfg:       "#bbbbbb"
-dwm.statusbg:       "#ff0000"
-dwm.statusborder:   "#000000"
+dwm.normfgcolor:    #bbbbbb
+dwm.normbgcolor:    #222222
+dwm.normbordercolor:#444444
+dwm.selfgcolor:     #eeeeee
+dwm.selbgcolor:     #005577
+dwm.selbordercolor: #005577
+dwm.tagsnormfg:     #bbbbbb
+dwm.tagsnormbg:     #222222
+dwm.tagsnormborder: #000000
+dwm.tagsselfg:      #eeeeee
+dwm.tagsselbg:      #005577
+dwm.tagsselborder:  #000000
+dwm.infonormfg:     #bbbbbb
+dwm.infonormbg:     #222222
+dwm.infonormborder: #000000
+dwm.infoselfg:      #eeeeee
+dwm.infoselbg:      #005577
+dwm.infoselborder:  #000000
+dwm.statusfg:       #bbbbbb
+dwm.statusbg:       #222222
+dwm.statusborder:   #000000
 
 ! Black     - Color 00 - Color 08
 ! Red       - Color 01 - Color 09
@@ -33,19 +33,19 @@ dwm.statusborder:   "#000000"
 ! Cyan      - Color 06 - Color 14
 ! White     - Color 07 - Color 15
 
-termcol0:   "#000000"
-termcol1:   "#ff0000"
-termcol2:   "#33ff00"
-termcol3:   "#ff0099"
-termcol4:   "#0066ff"
-termcol5:   "#cc00ff"
-termcol6:   "#00ffff"
-termcol7:   "#d0d0d0"
-termcol8:   "#808080"
-termcol9:   "#ff0000"
-termcol10:  "#33ff00"
-termcol11:  "#ff0099"
-termcol12:  "#0066ff"
-termcol13:  "#cc00ff"
-termcol14:  "#00ffff"
-termcol15:  "#ffffff"
+termcol0:   #000000
+termcol1:   #ff0000
+termcol2:   #33ff00
+termcol3:   #ff0099
+termcol4:   #0066ff
+termcol5:   #cc00ff
+termcol6:   #00ffff
+termcol7:   #d0d0d0
+termcol8:   #808080
+termcol9:   #ff0000
+termcol10:  #33ff00
+termcol11:  #ff0099
+termcol12:  #0066ff
+termcol13:  #cc00ff
+termcol14:  #00ffff
+termcol15:  #ffffff
