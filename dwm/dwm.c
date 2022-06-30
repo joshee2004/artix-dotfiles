@@ -918,10 +918,7 @@ drawbar(Monitor *m)
 	if ((w = m->ww - tw - x) > bh) {
         if (m->sel) {
 			drw_setscheme(drw, scheme[m == selmon ? SchemeInfoSel : SchemeInfoNorm]);
-            if (TEXTW(m->sel->name) > w) /* title is bigger than the width of the title rectangle, don't center */
-				drw_text(drw, x, 0, w, bh, lrpad / 2 + (m->sel->icon ? m->sel->icw + ICONSPACING : 0), m->sel->name, 0);
-			else /* center window title */
-				drw_text(drw, x, 0, w, bh, (w - TEXTW(m->sel->name) / 2) + (m->sel->icon ? m->sel->icw + ICONSPACING : 0), m->sel->name, 0);
+			drw_text(drw, x, 0, w, bh, lrpad / 2 + (m->sel->icon ? m->sel->icw + ICONSPACING : 0), m->sel->name, 0);
 			if (m->sel->icon) 
 				drw_pic(drw, x + lrpad / 2, (bh - m->sel->ich) / 2, m->sel->icw, m->sel->ich, m->sel->icon);
 			if (m->sel->isfloating)
