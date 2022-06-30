@@ -3,29 +3,29 @@
 # Color scheme for dwm
 
 dwm.normfgcolor:    "#bbbbbb"
-dwm.normbgcolor:    "#222222"
-dwm.normbordercolor:"#444444"
+dwm.normbgcolor:    "#000000"
+dwm.normbordercolor:"#000000"
 dwm.selfgcolor:     "#eeeeee"
-dwm.selbgcolor:     "#005577"
-dwm.selbordercolor: "#005577"
+dwm.selbgcolor:     "#ff0000"
+dwm.selbordercolor: "#000000"
 dwm.tagsnormfg:     "#bbbbbb"
-dwm.tagsnormbg:     "#222222"
-dwm.tagsnormborder: "#444444"
+dwm.tagsnormbg:     "#ff0000"
+dwm.tagsnormborder: "#000000"
 dwm.tagsselfg:      "#eeeeee"
-dwm.tagsselbg:      "#005577"
-dwm.tagsselborder:  "#005577"
+dwm.tagsselbg:      "#000000"
+dwm.tagsselborder:  "#000000"
 dwm.infonormfg:     "#bbbbbb"
-dwm.infonormbg:     "#222222"
-dwm.infonormborder: "#444444"
+dwm.infonormbg:     "#000000"
+dwm.infonormborder: "#000000"
 dwm.infoselfg:      "#eeeeee"
-dwm.infoselbg:      "#005577"
-dwm.infoselborder:  "#005577"
+dwm.infoselbg:      "#ff0000"
+dwm.infoselborder:  "#000000"
 dwm.statusfg:       "#bbbbbb"
-dwm.statusbg:       "#222222"
-dwm.statusborder:   "#444444"
+dwm.statusbg:       "#ff0000"
+dwm.statusborder:   "#000000"
 
 # Black     - Color 00 - Color 08
-# Red       - Coloe 01 - Color 09
+# Red       - Color 01 - Color 09
 # Green     - Color 02 - Color 10
 # Yellow    - Color 03 - Color 11
 # Blue      - Color 04 - Color 12
