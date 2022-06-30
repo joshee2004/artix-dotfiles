@@ -865,14 +865,13 @@ drawstatusbar(Monitor *m, int bh, char* stext) {
 void
 drawbar(Monitor *m)
 {
-	int x, w, tw = 0, mw, ew = 0;
+	int x, w, tw = 0;
 	int boxs = drw->fonts->h / 9;
 	int boxw = drw->fonts->h / 6 + 2;
-	unsigned int i, occ = 0, urg = 0, n = 0;
+	unsigned int i, occ = 0, urg = 0;
 	Client *c;
 	char tagdisp[64];
 	char *masterclientontag[LENGTH(tags)];
-
 	if (!m->showbar)
 		return;
 
@@ -884,8 +883,6 @@ drawbar(Monitor *m)
 		masterclientontag[i] = NULL;
 
 	for (c = m->clients; c; c = c->next) {
-		if (ISVISIBLE(c))
-			n++;
 		occ |= c->tags;
 		if (c->isurgent)
 			urg |= c->tags;
@@ -918,44 +915,23 @@ drawbar(Monitor *m)
 	w = blw = TEXTW(m->ltsymbol);
 	drw_setscheme(drw, scheme[SchemeTagsNorm]);
 	x = drw_text(drw, x, 0, w, bh, lrpad / 2, m->ltsymbol, 0);
-
 	if ((w = m->ww - tw - x) > bh) {
-        if (n > 0) {
-			tw = TEXTW(m->sel->name) + lrpad;
-			mw = (tw >= w || n == 1) ? 0 : (w - tw) / (n - 1);
-
-			i = 0;
-			for (c = m->clients; c; c = c->next) {
-				if (!ISVISIBLE(c) || c == m->sel)
-					continue;
-				tw = TEXTW(c->name);
-				if(tw < mw)
-					ew += (mw - tw);
-				else
-					i++;
-			}
-			if (i > 0)
-				mw += ew / i;
-			for (c = m->clients; c; c = c->next) {
-				if (!ISVISIBLE(c))
-					continue;
-				tw = MIN(m->sel == c ? w : mw, TEXTW(c->name));
-                 
-				drw_setscheme(drw, scheme[m == selmon && m->sel == c ? SchemeTagsSel : SchemeTagsNorm]);
-				if (tw > lrpad / 2)
-					drw_text(drw, x, 0, tw, bh, lrpad / 2, c->name, 0);
-                if (c->icon) 
-                    drw_pic(drw, x + lrpad / 2, (bh - c->ich) / 2, c->icw, c->ich, c->icon);
-				if (c->isfloating)
-					drw_rect(drw, x + boxs, boxs, boxw, boxw, c->isfixed, 0);
-				x += tw;
-				w -= tw;
-			}
- 		}
-		drw_setscheme(drw, scheme[SchemeTagsNorm]);
-		drw_rect(drw, x, 0, w, bh, 1, 1);
+        if (m->sel) {
+			drw_setscheme(drw, scheme[m == selmon ? SchemeInfoSel : SchemeInfoNorm]);
+            if (TEXTW(m->sel->name) > w) /* title is bigger than the width of the title rectangle, don't center */
+				drw_text(drw, x, 0, w, bh, lrpad / 2 + (m->sel->icon ? m->sel->icw + ICONSPACING : 0), m->sel->name, 0);
+			else /* center window title */
+				drw_text(drw, x, 0, w, bh, (w - TEXTW(m->sel->name) / 2) + (m->sel->icon ? m->sel->icw + ICONSPACING : 0), m->sel->name, 0);
+			if (m->sel->icon) 
+				drw_pic(drw, x + lrpad / 2, (bh - m->sel->ich) / 2, m->sel->icw, m->sel->ich, m->sel->icon);
+			if (m->sel->isfloating)
+				drw_rect(drw, x + boxs, boxs, boxw, boxw, m->sel->isfixed, 0);
+		} else {
+			drw_setscheme(drw, scheme[SchemeInfoNorm]);
+			drw_rect(drw, x, 0, w, bh, 1, 1);
 	}
 	drw_map(drw, m->barwin, 0, 0, m->ww, bh);
+}
 }
 
 void

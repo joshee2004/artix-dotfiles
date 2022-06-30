@@ -1,6 +1,7 @@
 /* Theme file for dwm */
 
-#define ICONSIZE 10   /* icon size */
+/* Icons */
+#define ICONSIZE 16   /* icon size */
 #define ICONSPACING 5 /* space between icon and title */
 
 /* Appearance */
@@ -10,10 +11,10 @@ static int showbar              = 1;        /* 0 means no bar */
 static int topbar               = 1;        /* 0 means bottom bar */
 
 /* Fonts */
-static char font[]              = "Terminus:size=12";
-static char emoji[]             = "FontAwesome:size=16";
+static char font[]              = "Hack:size=12";
+static char emoji[]             = "NotoFontsEmoji:size=16";
 static char *fonts[]            = { font, emoji };
-static char dmenufont[]         = "Terminus:size=12";
+static char dmenufont[]         = "Hack:size=12";
 
 /* Colors */
 static char normfgcolor[]       = "#bbbbbb";
