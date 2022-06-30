@@ -12,10 +12,11 @@ main() {
         read choice
         case "$choice" in
             'c') ./config.sh ;;
-            'i') make
+            'i') su -c "cp status.sh /usr/bin/dwmstatus && chmod +rwx /usr/bin/dwmstatus" root
+                 make
                  su -c "make clean install" root
                  mv ~/.xsession ~/.xsession-old
-                 echo "exec dwm" >> ~/.xsession
+                 echo "picom & dwmstatus & exec dwm" > ~/.xsession
                  chmod +rwx .xsession
                  echo "Install complete! Reboot for changes to take effect" ;;
             'q') echo "Quitting..."
@@ -25,11 +26,21 @@ main() {
         echo "Welcome to dwm installer!"
         echo "Installing dependencies..."
         # Check package manager
-        ls /usr/bin/apt && distro=debian
-        ls /usr/bin/rpm && distro=rh
-        ls /usr/bin/xbps-install && distro=void
-        ls /usr/bin/pacman && distro=arch
-        ls /usr/bin/emerge && distro=gentoo
+        if [ -e "/usr/bin/apt" ]; then
+            distro=debian
+        fi
+        if [ -e "/usr/bin/rpm" ]; then
+            distro=rh
+        fi
+        if [ -e "/usr/bin/xbps-install" ]; then
+            distro=void
+        fi
+        if [ -e "/usr/bin/pacman" ]; then
+            distro=arch
+        fi
+        if [ -e "/usr/bin/emerge" ]; then
+            distro=gentoo
+        fi
         # Execute installation commands accordingly
         case $distro in
             "debian") su -c "apt install xorg picom dwm alacritty rofi vim maim xclip pfetch cmatrix feh" root ;;
