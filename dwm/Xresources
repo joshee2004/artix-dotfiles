@@ -1,6 +1,6 @@
-# Xresources file is used for configuring color schemes
+! Xresources file is used for configuring color schemes
 
-# Color scheme for dwm
+! Color scheme for dwm
 
 dwm.normfgcolor:    "#bbbbbb"
 dwm.normbgcolor:    "#000000"
@@ -24,14 +24,14 @@ dwm.statusfg:       "#bbbbbb"
 dwm.statusbg:       "#ff0000"
 dwm.statusborder:   "#000000"
 
-# Black     - Color 00 - Color 08
-# Red       - Color 01 - Color 09
-# Green     - Color 02 - Color 10
-# Yellow    - Color 03 - Color 11
-# Blue      - Color 04 - Color 12
-# Magenta   - Color 05 - Color 13
-# Cyan      - Color 06 - Color 14
-# White     - Color 07 - Color 15
+! Black     - Color 00 - Color 08
+! Red       - Color 01 - Color 09
+! Green     - Color 02 - Color 10
+! Yellow    - Color 03 - Color 11
+! Blue      - Color 04 - Color 12
+! Magenta   - Color 05 - Color 13
+! Cyan      - Color 06 - Color 14
+! White     - Color 07 - Color 15
 
 termcol0:   "#000000"
 termcol1:   "#ff0000"
