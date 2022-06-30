@@ -26,22 +26,7 @@ main() {
     else 
         echo "Welcome to dwm installer!"
         echo "Installing dependencies..."
-        # Check package manager
-        if [ -e "/usr/bin/apt" ]; then
-            distro=debian
-        fi
-        if [ -e "/usr/bin/rpm" ]; then
-            distro=rh
-        fi
-        if [ -e "/usr/bin/xbps-install" ]; then
-            distro=void
-        fi
-        if [ -e "/usr/bin/pacman" ]; then
-            distro=arch
-        fi
-        if [ -e "/usr/bin/emerge" ]; then
-            distro=gentoo
-        fi
+        distro=. ../package.sh
         # Execute installation commands accordingly
         case $distro in
             "debian") su -c "apt install xorg picom dwm alacritty rofi vim maim xclip pfetch cmatrix feh" root ;;
@@ -49,6 +34,8 @@ main() {
             "void") su -c "xbps-install xorg picom dwm alacritty rofi vim maim xclip pfetch cmatrix feh" root ;;
             "arch") su -c "pacman -S --needed xorg picom dwm alacritty rofi vim maim xclip pfetch cmatrix feh" root ;;
             "gentoo") su -c "emerge --ask xorg picom dwm alacritty rofi vim maim xclip pfetch cmatrix feh" root ;;
+            "unsupported") echo "Your distro is not supported! Manually install the following packages:"
+                           echo "xorg picom dwm alacritty rofi vim maim xclip pfetch cmatrix feh" ;;
         esac
         echo "Installed all dependencies, time to configure dwm"
         chmod +rwx config.sh && ./config.sh

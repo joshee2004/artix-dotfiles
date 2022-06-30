@@ -23,7 +23,8 @@ Dotfiles for my artix rice. Includes-
 7. [x] Pfetch (for system info)
 8. [x] CMatrix (cool matrix tool)
 9. [x] Maim and Xclip (screenshot tools)
-10. [x] And additional tools as needed
+10. [x] Pywal (color scheme generator)
+11. [x] And additional tools as needed
 
 ## My rice works on the following distros as of now
 1. Debian
@@ -52,11 +53,13 @@ Feel free to fork my project to match your distro if you don't use one of the cu
     
     ![dwm-install-3](readme/dwm-install-3.png)
 6. Reboot after installing dwm to use it.
+7. After rebooting, to enable pywal, go to the repo directory and run pywal.sh:
+    ```cd artix-dotfiles && ./pywal.sh```
 
 NOTE: My dotfiles does not include alacritty as of now, and will be added in a future update. So to use the terminal after installing dwm, make sure you install alacritty using your favorite package manager.
 
 ## Configuration
-To be added
+For pywal, visit https://github.com/dylanaraps/pywal/wiki/Customization for more information
 
 ## Bugs
 1. The icons are displayed on top of text.
