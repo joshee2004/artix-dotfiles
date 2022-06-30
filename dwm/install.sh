@@ -15,8 +15,9 @@ main() {
             'i') su -c "cp status.sh /usr/bin/dwmstatus && chmod +rwx /usr/bin/dwmstatus" root
                  make
                  su -c "make clean install" root
+                 mv Xresources ~/.Xresources
                  mv ~/.xsession ~/.xsession-old
-                 echo "picom & dwmstatus & exec dwm" > ~/.xsession
+                 echo "xrdb ~/.Xresources & picom & dwmstatus & exec dwm" > ~/.xsession
                  chmod +rwx .xsession
                  echo "Install complete! Reboot for changes to take effect" ;;
             'q') echo "Quitting..."
