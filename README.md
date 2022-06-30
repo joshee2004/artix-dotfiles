@@ -1,6 +1,7 @@
 # Joshua's Artix Dotfiles
 
 ## Info
+![dwm-rice-1](readme/dwm-rice-1.png)
 Dotfiles for my artix rice. Includes-
 1. [x] Xorg server, video driver and basic fonts
 2. [ ] Light DM (login shell)
@@ -10,13 +11,12 @@ Dotfiles for my artix rice. Includes-
         1. Self Restart
         2. Fullscreen
         3. Colorbar
-        4. Fancybar
-        5. Hide tags
-        6. Tag Labels
-        7. Underline tags
-        8. Xresources + xrdb
-        9. Status 2d with xrdb support
-        10. Winicon
+        4. Hide tags
+        5. Tag Labels
+        6. Underline tags
+        7. Xresources + xrdb
+        8. Status 2d with xrdb support
+        9. Winicon
 4. [ ] Rofi (application launcher)
 5. [ ] Alacritty (terminal)
 6. [ ] Neovim (text editor)
