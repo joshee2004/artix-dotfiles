@@ -3,7 +3,7 @@
 # Author: Joshua Royar
 # Description: Script to install pywal
 
-distro=./package.sh
+distro=$(./package.sh)
 
 case $distro in
     "debian") su -c "apt install python3-pip && pip3 install pywal" root ;;
