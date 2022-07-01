@@ -26,7 +26,7 @@ main() {
     else 
         echo "Welcome to dwm installer!"
         echo "Installing dependencies..."
-        distro=. ../package.sh
+        distro=$(. ../package.sh)
         # Execute installation commands accordingly
         case $distro in
             "debian") su -c "apt install xorg picom dwm alacritty rofi vim maim xclip pfetch cmatrix feh" root ;;
