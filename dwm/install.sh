@@ -15,9 +15,9 @@ main() {
             'i') su -c "cp status.sh /usr/bin/dwmstatus && chmod +rwx /usr/bin/dwmstatus" root
                  make
                  su -c "make clean install" root
-                 mv ~/.xsession ~/.xsession-old
-                 echo "xrdb ~/.Xresources & picom & dwmstatus & exec dwm" > ~/.xsession
-                 chmod +rwx .xsession
+                 mv ~/.xinitrc ~/.xinitrc-old
+                 echo "picom & dwmstatus & exec dwm" > ~/.xinitrc
+                 chmod +rwx .xinitrc
                  echo "Install complete! Reboot for changes to take effect" ;;
             'q') echo "Quitting..."
                  exit 0 ;;
@@ -28,11 +28,11 @@ main() {
         distro=$(. ../package.sh)
         # Execute installation commands accordingly
         case $distro in
-            "debian") su -c "apt install xorg picom make gcc alacritty rofi vim maim xclip neofetch cmatrix feh" root ;;
-            "rh") su -c "dnf install xorg picom make gcc alacritty rofi vim maim xclip neofetch cmatrix feh" root ;;
+            "debian") su -c "apt install xorg xinit picom make gcc alacritty rofi vim maim xclip neofetch cmatrix feh" root ;;
+            "rh") su -c "dnf install xorg xinit picom make gcc alacritty rofi vim maim xclip neofetch cmatrix feh" root ;;
             "void") su -c "xbps-install xorg picom make gcc alacritty rofi vim maim xclip neofetch cmatrix feh" root ;;
-            "arch") su -c "pacman -S --needed xorg picom make gcc alacritty rofi vim maim xclip neofetch cmatrix feh" root ;;
-            "gentoo") su -c "emerge --ask xorg picom make gcc alacritty rofi vim maim xclip neofetch cmatrix feh" root ;;
+            "arch") su -c "pacman -S --needed xorg xorg-xinit picom make gcc alacritty rofi vim maim xclip neofetch cmatrix feh" root ;;
+            "gentoo") su -c "emerge --ask xorg xinit picom make gcc alacritty rofi vim maim xclip neofetch cmatrix feh" root ;;
             "unsupported") echo "Your distro is not supported! Manually install the following packages:"
                            echo "xorg picom dwm alacritty rofi vim maim xclip pfetch cmatrix feh" ;;
         esac
