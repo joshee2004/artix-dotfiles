@@ -12,7 +12,7 @@ static int topbar               = 1;        /* 0 means bottom bar */
 
 /* Fonts */
 static char font[]              = "Hack:size=12";
-static char emoji[]             = "NotoFontsEmoji:size=16";
+static char emoji[]             = "Font Awesome 6 Free Regular:size=10";
 static char *fonts[]            = { font, emoji };
 static char dmenufont[]         = "Hack:size=12";
 

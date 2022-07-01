@@ -15,6 +15,7 @@ main() {
             'i') su -c "cp status.sh /usr/bin/dwmstatus && chmod +rwx /usr/bin/dwmstatus" root
                  make
                  su -c "make clean install" root
+                 mv Xresources ~/.Xresources
                  if [ -e ~/.xinitrc ]; then
                     mv ~/.xinitrc ~/.xinitrc-old
                  fi

@@ -2,26 +2,26 @@
 
 ! Color scheme for dwm
 
-dwm.normfgcolor:    #bbbbbb
-dwm.normbgcolor:    #222222
-dwm.normbordercolor:#444444
-dwm.selfgcolor:     #eeeeee
-dwm.selbgcolor:     #005577
-dwm.selbordercolor: #005577
-dwm.tagsnormfg:     #bbbbbb
-dwm.tagsnormbg:     #222222
+dwm.normfgcolor:    #ffffff
+dwm.normbgcolor:    #000000
+dwm.normbordercolor:#000000
+dwm.selfgcolor:     #000000
+dwm.selbgcolor:     #ffffff
+dwm.selbordercolor: #000000
+dwm.tagsnormfg:     #ffffff
+dwm.tagsnormbg:     #000000
 dwm.tagsnormborder: #000000
-dwm.tagsselfg:      #eeeeee
-dwm.tagsselbg:      #005577
+dwm.tagsselfg:      #000000
+dwm.tagsselbg:      #ffffff
 dwm.tagsselborder:  #000000
-dwm.infonormfg:     #bbbbbb
-dwm.infonormbg:     #222222
+dwm.infonormfg:     #000000
+dwm.infonormbg:     #ffffff
 dwm.infonormborder: #000000
-dwm.infoselfg:      #eeeeee
-dwm.infoselbg:      #005577
+dwm.infoselfg:      #ffffff
+dwm.infoselbg:      #000000
 dwm.infoselborder:  #000000
-dwm.statusfg:       #bbbbbb
-dwm.statusbg:       #222222
+dwm.statusfg:       #ffffff
+dwm.statusbg:       #000000
 dwm.statusborder:   #000000
 
 ! Black     - Color 00 - Color 08

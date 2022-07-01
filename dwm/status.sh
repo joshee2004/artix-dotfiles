@@ -76,9 +76,9 @@ bar_date() {
 
 bar_battery() {
     if [ -e "/sys/class/power_supply/BAT0/capacity" ]; then
-        echo "|  $(cat /sys/class/power_supply/BAT0/capacity)%"
+        echo "|  $(cat /sys/class/power_supply/BAT0/capacity)%"
     elif [ -e "/sys/class/power_supply/BAT1/capacity" ]; then
-        echo "|  $(cat /sys/class/power_supply/BAT1/capacity)%"
+        echo "|  $(cat /sys/class/power_supply/BAT1/capacity)%"
     fi
 }
 
@@ -89,11 +89,11 @@ bar_volume(){
 		icon= #mute icon
 	else
 		if [[ "$vol" -lt "40" ]]; then
-			icon= #low volume icon
+			icon=
 		elif [[ "$vol" -gt "40" && "$vol" -lt "70" ]]; then
-			icon= #medium volume icon
+			icon=奔
 		elif [[ "$vol" -gt "70" ]]; then
-			icon= #high volume icon
+			icon=墳
 		fi
 	fi
 
@@ -114,7 +114,7 @@ bar_memory() {
 
 bar_cpu_temp() {
     if [ -e "/usr/bin/sensors" ]; then
-        echo "|  $(sensors | grep "temp1" | sed 's/(.*//' | sed "s/temp1.//" | sed -r 's/\s+//g' | awk '{ print $1 }')"
+        echo "|  $(sensors | grep "temp1" | sed 's/(.*//' | sed "s/temp1.//" | sed -r 's/\s+//g' | awk '{ print $1 }')"
     fi
 }
 
