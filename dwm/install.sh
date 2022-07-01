@@ -29,11 +29,11 @@ main() {
         distro=$(. ../package.sh)
         # Execute installation commands accordingly
         case $distro in
-            "debian") su -c "apt install xorg picom alacritty rofi vim maim xclip neofetch cmatrix feh" root ;;
-            "rh") su -c "dnf install xorg picom alacritty rofi vim maim xclip neofetch cmatrix feh" root ;;
-            "void") su -c "xbps-install xorg picom alacritty rofi vim maim xclip neofetch cmatrix feh" root ;;
-            "arch") su -c "pacman -S --needed xorg picom alacritty rofi vim maim xclip neofetch cmatrix feh" root ;;
-            "gentoo") su -c "emerge --ask xorg picom alacritty rofi vim maim xclip neofetch cmatrix feh" root ;;
+            "debian") su -c "apt install xorg picom make gcc alacritty rofi vim maim xclip neofetch cmatrix feh" root ;;
+            "rh") su -c "dnf install xorg picom make gcc alacritty rofi vim maim xclip neofetch cmatrix feh" root ;;
+            "void") su -c "xbps-install xorg picom make gcc alacritty rofi vim maim xclip neofetch cmatrix feh" root ;;
+            "arch") su -c "pacman -S --needed xorg picom make gcc alacritty rofi vim maim xclip neofetch cmatrix feh" root ;;
+            "gentoo") su -c "emerge --ask xorg picom make gcc alacritty rofi vim maim xclip neofetch cmatrix feh" root ;;
             "unsupported") echo "Your distro is not supported! Manually install the following packages:"
                            echo "xorg picom dwm alacritty rofi vim maim xclip pfetch cmatrix feh" ;;
         esac
