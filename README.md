@@ -30,7 +30,10 @@ Dotfiles for my artix rice. Includes-
 1. Debian
 2. Fedora
 3. Void
-4. Arch
+4. Arch **[TRIED AND TESTED!]**
+
+![dwm-install-4.png](readme/dwm-install-4.png)
+
 5. Gentoo
 
 Feel free to fork my project to match your distro if you don't use one of the currently supported distros.
@@ -62,8 +65,4 @@ NOTE: My dotfiles does not include alacritty as of now, and will be added in a f
 For pywal, visit https://github.com/dylanaraps/pywal/wiki/Customization for more information
 
 ## Bugs
-1. The icons are displayed on top of text.
-
-![bug-1](readme/bug-1.png)
-
-If there are any more bugs feel free to report them to me!
+If there are any bugs feel free to report them to me!
