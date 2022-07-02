@@ -8,19 +8,21 @@ Dotfiles for my artix rice. Includes-
 3. [x] DWM (minimal window manager)
     - [x] custom-made status bar
     - [x] patches
-        1. Self Restart
-        2. Fullscreen
-        3. Colorbar
-        4. Hide tags
-        5. Tag Labels
-        6. Underline tags
-        7. Xresources + xrdb
-        8. Status 2d with xrdb support
-        9. Winicon
+        - Self Restart
+        - Fullscreen
+        - Colorbar
+        - Hide tags
+        - Tag Labels
+        - Underline tags
+        - Xresources + xrdb
+        - Status 2d with xrdb support
+        - Winicon
+        - Gapps
+        - Centered Windows
 4. [ ] Rofi (application launcher)
 5. [ ] Alacritty (terminal)
 6. [ ] Neovim (text editor)
-7. [x] Pfetch (for system info)
+7. [x] Neofetch (for system info)
 8. [x] CMatrix (cool matrix tool)
 9. [x] Maim and Xclip (screenshot tools)
 10. [x] Pywal (color scheme generator)
