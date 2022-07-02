@@ -1,7 +1,7 @@
 # Joshua's Artix Dotfiles
 
 ## Info
-![dwm-rice-1](readme/dwm-rice-1.png)
+![dwm-rice-1](readme/dwm-rice-2.png)
 Dotfiles for my artix rice. Includes-
 1. [x] Xorg server, video driver and basic fonts
 2. [ ] Light DM (login shell)
