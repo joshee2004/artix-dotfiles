@@ -19,9 +19,9 @@ Dotfiles for my artix rice. Includes-
         - Winicon
         - Gapps
         - Centered Windows
-4. [ ] Rofi (application launcher)
-5. [ ] Alacritty (terminal)
-6. [ ] Neovim (text editor)
+4. [x] Rofi (application launcher)
+5. [x] Alacritty (terminal)
+6. [x] Neovim (text editor)
 7. [x] Neofetch (for system info)
 8. [x] CMatrix (cool matrix tool)
 9. [x] Maim and Xclip (screenshot tools)
