@@ -6,6 +6,7 @@
 
 /* Appearance */
 static unsigned int borderpx    = 0;        /* border pixel of window */
+static const unsigned int gappx = 6;        /* gaps between windows */
 static unsigned int snap        = 32;       /* snap pixel */
 static int showbar              = 1;        /* 0 means no bar */
 static int topbar               = 1;        /* 0 means bottom bar */
