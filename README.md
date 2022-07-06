@@ -8,9 +8,9 @@ Dotfiles for my artix rice. Includes-
 3. [x] DWM (minimal window manager)
     - [x] custom-made status bar
     - [x] patches
+        - Alpha
         - Self Restart
         - Fullscreen
-        - Colorbar
         - Hide tags
         - Tag Labels
         - Underline tags

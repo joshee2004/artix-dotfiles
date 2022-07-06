@@ -6,23 +6,8 @@ dwm.normfgcolor:    #ffffff
 dwm.normbgcolor:    #000000
 dwm.normbordercolor:#000000
 dwm.selfgcolor:     #000000
-dwm.selbgcolor:     #ffffff
+dwm.selbgcolor:     #d0d0d0
 dwm.selbordercolor: #000000
-dwm.tagsnormfg:     #ffffff
-dwm.tagsnormbg:     #000000
-dwm.tagsnormborder: #000000
-dwm.tagsselfg:      #000000
-dwm.tagsselbg:      #ffffff
-dwm.tagsselborder:  #000000
-dwm.infonormfg:     #000000
-dwm.infonormbg:     #ffffff
-dwm.infonormborder: #000000
-dwm.infoselfg:      #ffffff
-dwm.infoselbg:      #000000
-dwm.infoselborder:  #000000
-dwm.statusfg:       #ffffff
-dwm.statusbg:       #000000
-dwm.statusborder:   #000000
 
 ! Black     - Color 00 - Color 08
 ! Red       - Color 01 - Color 09

@@ -12,10 +12,10 @@ static int showbar              = 1;        /* 0 means no bar */
 static int topbar               = 1;        /* 0 means bottom bar */
 
 /* Fonts */
-static char font[]              = "Hack:size=12";
+static char font[]              = "Terminus:size=12";
 static char emoji[]             = "Font Awesome 6 Free Regular:size=10";
 static char *fonts[]            = { font, emoji };
-static char dmenufont[]         = "Hack:size=12";
+static char dmenufont[]         = "Terminus:size=12";
 
 /* Colors */
 static char normfgcolor[]       = "#bbbbbb";
@@ -24,31 +24,11 @@ static char normbordercolor[]   = "#444444";
 static char selfgcolor[]        = "#eeeeee";
 static char selbgcolor[]        = "#005577";
 static char selbordercolor[]    = "#005577";
-static char tagsnormfg[]        = "#bbbbbb";
-static char tagsnormbg[]        = "#222222";
-static char tagsnormborder[]    = "#000000";
-static char tagsselfg[]         = "#eeeeee";
-static char tagsselbg[]         = "#005577";
-static char tagsselborder[]     = "#000000";
-static char infonormfg[]        = "#bbbbbb";
-static char infonormbg[]        = "#222222";
-static char infonormborder[]    = "#000000";
-static char infoselfg[]         = "#eeeeee";
-static char infoselbg[]         = "#005577";
-static char infoselborder[]     = "#000000";
-static char statusfg[]          = "#bbbbbb";
-static char statusbg[]          = "#222222";
-static char statusborder[]      = "#000000";
 
 static char *colors[][3]        = {
     /*                      fg           bg           border   */
     [SchemeNorm]        = { normfgcolor, normbgcolor, normbordercolor },
     [SchemeSel]         = { selfgcolor,  selbgcolor,  selbordercolor  },
-	[SchemeTagsNorm]    = { tagsnormfg,  tagsnormbg,  tagsnormborder  },    // Tagbar left unselected {text,background,not used but cannot be empty}
-    [SchemeTagsSel]     = { tagsselfg,   tagsselbg,   tagsselborder   },    // Tagbar left selected {text,background,not used but cannot be empty}
-    [SchemeInfoNorm]    = { infonormfg,  infonormbg,  infonormborder  },    // Infobar middle  unselected {text,background,not used but cannot be empty}
-    [SchemeInfoSel]     = { infoselfg,   infoselbg,   infoselborder   },    // Infobar middle  selected {text,background,not used but cannot be empty} 
-    [SchemeStatus]      = { statusfg,    statusbg,    statusborder    },    // Statusbar right {text,background,not used but cannot be empty}
 };
 
 /* Status2d colors */
@@ -86,4 +66,14 @@ static char *termcolor[] = {
   termcol13,
   termcol14,
   termcol15,
+};
+
+/* Transparency */
+static const unsigned int baralpha          = 0xd0;
+static const unsigned int borderalpha       = OPAQUE;
+
+static unsigned int alphas[][3]       = {
+	/*               fg      bg        border     */
+	[SchemeNorm] = { OPAQUE, baralpha, borderalpha },
+	[SchemeSel]  = { OPAQUE, baralpha, borderalpha },
 };
