@@ -39,7 +39,7 @@ setcolors_wal() {
     color13=$(sed -n 13,13p $HOME/.cache/wal/colors)
     color14=$(sed -n 14,14p $HOME/.cache/wal/colors)
     color15=$(sed -n 15,15p $HOME/.cache/wal/colors)
-    if [[ -e ~/.cache/wal/colors ]]; then
+    if [ -e ~/.cache/wal/colors ]; then
         usingwal=true
     else
         usingwal=false
@@ -139,7 +139,7 @@ bar_base
 
 setcolors
 
-if [[ "$(cat ~/.config/swal/swal_wm)" =~ "xsetroot" ]]; then
+if [ -e "~/.cache/wal/colors" ]; then
     setcolors_wal
 fi
 
