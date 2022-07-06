@@ -22,7 +22,7 @@ fi
 
 # Install the dependencies if distro is supported
 
-echo distro + "detected. Installing dependencies..."
+echo $distro detected. Installing dependencies...
 
 case $distro in
   "debian") su -c "apt install xorg xinit picom make gcc alacritty rofi neovim maim xclip neofetch cmatrix feh" root ;;
