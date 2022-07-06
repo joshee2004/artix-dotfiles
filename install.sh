@@ -36,11 +36,11 @@ echo "Installed all dependencies sucessfully. Time to configure your rice"
 
 # Configuration Menu
 
-ch = 0
+ch=0
 
 echo "To configure your rice, refer to the documentation of the software online and change options accordingly"
 
-while [ $ch == 0 ]
+while [[ $ch == 0 ]]
   do
     echo "Configuration menu"
     echo "Press 1 to install pywal (This only installs pywal. You will have to refer to the documentation to configure it for the apps)"
