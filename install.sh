@@ -36,24 +36,33 @@ echo "Installed all dependencies sucessfully. Time to configure your rice"
 
 # Configuration Menu
 
-echo "To configure your rice, refer to the documentation of the software online and change options accordingly"
-echo "Press 1 to install pywal (This only installs pywal. You will have to refer to the documentation to configure it for the apps)"
-echo "Press 2 to configure alacritty"
-echo "Press 3 to configure rofi"
-echo "Press 4 to configure neovim"
-echo "Press 5 to configure dwm"
-echo "Press 6 to install everything without configuration (defaults)"
-read choice
+ch = 0
 
-case $choice in
-  1) . /pywal.sh ;;
-  2)  nvim alacritty/alacritty.yml
-      cp -r alacritty ~/.config/ ;;
-  3)  nvim rofi/config.rasi
-      cp -r rofi ~/.config/ ;;
-  4)  nvim nvim/init.lua
-      cp -r nvim ~/.config/ ;;
-  5)  . /dwm/install.sh ;;
-  6)  cp -r alacritty rofi nvim ~/.config/
-      . /dwm/install.sh ;;
-esac
+echo "To configure your rice, refer to the documentation of the software online and change options accordingly"
+
+while [ $ch == 0 ]
+  do
+    echo "Configuration menu"
+    echo "Press 1 to install pywal (This only installs pywal. You will have to refer to the documentation to configure it for the apps)"
+    echo "Press 2 to configure alacritty"
+    echo "Press 3 to configure rofi"
+    echo "Press 4 to configure neovim"
+    echo "Press 5 to configure dwm"
+    echo "Press 6 to install everything without configuration (defaults)"
+    echo "Press q to quit configuration menu"
+    read choice
+
+  case $choice in
+    1)  . /pywal.sh ;;
+    2)  nvim alacritty/alacritty.yml
+        cp -r alacritty ~/.config/ ;;
+    3)  nvim rofi/config.rasi
+        cp -r rofi ~/.config/ ;;
+    4)  nvim nvim/init.lua
+        cp -r nvim ~/.config/ ;;
+    5)  . /dwm/install.sh ;;
+    6)  cp -r alacritty rofi nvim ~/.config/
+        . /dwm/install.sh ;;
+    7)  ch = 1 ;;
+  esac
+done

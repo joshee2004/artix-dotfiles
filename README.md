@@ -49,11 +49,12 @@ Feel free to fork my project to match your distro if you don't use one of the cu
     ![dwm-install-1](readme/dwm-install-1.png)
 4. After that, you'll be asked to configure each software. You will have to refer to the documentation of the required softwares to configure. If you want to install everything with the default configuration, Press 6.
     ![dwm-install-2](readme/dwm-install-2.png)
-5. Configuration of softwares other than dwm are pretty straight forward and involve editing the configuration file to suit your needs.
+5. Selecting option 1 will install pywal and configure it for alacritty. Configuration of softwares other than dwm are pretty straight forward and involve editing the configuration file to suit your needs.
 6. For dwm, you'll be given an option to continue configuring dwm, install it or quit the installation.
     - Press c to return back to configuration menu
-    - Press i to save changes and install dwm
+    - Press i to save changes and install dwm    
     - Press q to quit the installer
+
     ![dwm-install-3](readme/dwm-install-3.png)
 6. Reboot after installing dwm to use it.
 7. After rebooting, to enable pywal, go to the repo directory and run pywal.sh:
