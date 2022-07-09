@@ -38,12 +38,12 @@ static const Rule rules[] = {
 ResourcePref resources[] = {
 		{ "font",               STRING,  &font              },
 		{ "dmenufont",          STRING,  &dmenufont         },
-		{ "normbgcolor",        STRING,  &normbgcolor       },
-		{ "normbordercolor",    STRING,  &normbordercolor   },
-		{ "normfgcolor",        STRING,  &normfgcolor       },
+        { "normfgcolor",        STRING,  &normfgcolor       },
+		{ "normbgcolor",        STRING,  &normbgcolor       },		
+        { "normbordercolor",    STRING,  &normbordercolor   },
+		{ "selfgcolor",         STRING,  &selfgcolor        },
 		{ "selbgcolor",         STRING,  &selbgcolor        },
 		{ "selbordercolor",     STRING,  &selbordercolor    },
-		{ "selfgcolor",         STRING,  &selfgcolor        },
 		{ "borderpx",          	INTEGER, &borderpx          },
 		{ "snap",          		INTEGER, &snap              },
 		{ "showbar",          	INTEGER, &showbar           },
@@ -52,4 +52,3 @@ ResourcePref resources[] = {
 		{ "resizehints",       	INTEGER, &resizehints       },
 		{ "mfact",      	 	FLOAT,   &mfact             },
 };
-

@@ -17,21 +17,31 @@ static char emoji[]             = "Font Awesome 6 Free Regular:size=10";
 static char *fonts[]            = { font, emoji };
 static char dmenufont[]         = "Terminus:size=12";
 
-/* Colors */
+/* Dwm colors */
 static char normfgcolor[]       = "#bbbbbb";
 static char normbgcolor[]       = "#222222";
 static char normbordercolor[]   = "#444444";
 static char selfgcolor[]        = "#eeeeee";
 static char selbgcolor[]        = "#005577";
 static char selbordercolor[]    = "#005577";
+static char urgfgcolor[]        = "#eeeeee";
+static char urgbgcolor[]        = "#005577";
+static char urgbordercolor[]    = "#005577";
 
+#if __has_include("~/.cache/wal/colors-wal-dwm.h")
+/* Load pywal colors */
+#include "~/.cache/wal/colors-wal-dwm.h"
+#else
+/* Load default colors */
 static char *colors[][3]        = {
-    /*                      fg           bg           border   */
-    [SchemeNorm]        = { normfgcolor, normbgcolor, normbordercolor },
-    [SchemeSel]         = { selfgcolor,  selbgcolor,  selbordercolor  },
+  /*               fg           bg           border */
+  [SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },
+  [SchemeSel]  = { selfgcolor,  selbgcolor,  selbordercolor  },
+  [SchemeUrg]  = { urgfgcolor,  urgbgcolor,  urgbordercolor  },
 };
+#endif
 
-/* Status2d colors */
+/* Terminal colors */
 static char termcol0[]  = "#000000"; /* black   */
 static char termcol1[]  = "#ff0000"; /* red     */
 static char termcol2[]  = "#33ff00"; /* green   */
@@ -49,7 +59,7 @@ static char termcol13[] = "#cc00ff"; /* magenta */
 static char termcol14[] = "#00ffff"; /* cyan    */
 static char termcol15[] = "#ffffff"; /* white   */
 
-static char *termcolor[] = {
+static char *termcolor[]= {
   termcol0,
   termcol1,
   termcol2,
@@ -69,11 +79,12 @@ static char *termcolor[] = {
 };
 
 /* Transparency */
-static const unsigned int baralpha          = 0xd0;
-static const unsigned int borderalpha       = OPAQUE;
+static const unsigned int baralpha    = 0xd0;
+static const unsigned int borderalpha = OPAQUE;
 
 static unsigned int alphas[][3]       = {
 	/*               fg      bg        border     */
 	[SchemeNorm] = { OPAQUE, baralpha, borderalpha },
 	[SchemeSel]  = { OPAQUE, baralpha, borderalpha },
+	[SchemeUrg]  = { OPAQUE, baralpha, borderalpha },
 };
