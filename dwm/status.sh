@@ -112,6 +112,7 @@ bar_battery() {
 bar_volume(){
 	vol=$(pamixer --get-volume | awk '{ print $1 }')
 	mute=$(pamixer --get-mute)	
+
 	if [[ "$mute" -eq "1" ]]; then
 		icon= #mute icon
 	else
@@ -152,6 +153,7 @@ bar_base() {
 
 print_bar() {
     xsetroot -name "${setcolorcmd1}$(bar_cpu_temp) ${setcolorcmd2}$(bar_memory) ${setcolorcmd3}$(bar_wifi) ${setcolorcmd4}$(bar_volume) ${setcolorcmd5}$(bar_battery) ${setcolorcmd6}$(bar_date) ${setcolorcmd7}$(bar_time)"
+    
     if [[ "$usingwal" == "true" ]]; then
         if [[ "$color1" = "$(sed 1,1p $HOME/.cache/wal/colors.sh)" ]]; then
             a=$a
@@ -159,14 +161,12 @@ print_bar() {
             setcolors_cmd
         fi
     fi
+    
     sleep $sleeptime
     print_bar
 }
 
 bar_base
-
-setcolors
-
 setcolors_cmd
-
+setcolors_cmd
 print_bar

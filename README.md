@@ -1,32 +1,32 @@
-# Joshua's Artix Dotfiles
+# Joshua's Artix Dotfiles [dwm + custom status + alacritty + rofi]
 
 ## Info
 ![dwm-rice-3](readme/dwm-rice-3.png)
 Dotfiles for my artix rice. Includes-
 1. [x] Xorg server, video driver and basic fonts
-2. [ ] Light DM (login shell)
-3. [x] DWM (minimal window manager)
+2. [x] DWM (minimal window manager)
     - [x] custom-made status bar
     - [x] patches
-        - Alpha
-        - Self Restart
+        - Alpha (Transparency)
+        - Always center (To center windows)
         - Fullscreen
         - Hide tags
+        - Pywal Patch
+        - Self Restart
         - Tag Labels
         - Underline tags
         - Xresources + xrdb
         - Status 2d with xrdb support
         - Winicon
         - Gapps
-        - Centered Windows
-4. [x] Rofi (application launcher)
-5. [x] Alacritty (terminal)
-6. [x] Neovim (text editor)
-7. [x] Neofetch (for system info)
-8. [x] CMatrix (cool matrix tool)
-9. [x] Maim and Xclip (screenshot tools)
-10. [x] Pywal (color scheme generator)
-11. [x] And additional tools as needed
+3. [x] Rofi (application launcher)
+4. [x] Alacritty (terminal)
+5. [x] Neovim (text editor)
+6. [x] Neofetch (for system info)
+7. [x] CMatrix (cool matrix tool)
+8. [x] Maim and Xclip (screenshot tools)
+9. [x] Pywal (color scheme generator)
+10. [x] And additional tools as needed
 
 ## My rice works on the following distros as of now
 1. Debian
@@ -61,6 +61,16 @@ Feel free to fork my project to match your distro if you don't use one of the cu
     ```cd artix-dotfiles && ./pywal.sh```
 
 ## Configuration
+### DWM
+Configuring dwm is pretty simple. You have 3 files:
+- theme.h (colors, fonts, transparency)
+- layout.h (the way bar is shown)
+- keys.h (keybindings)
+Edit these files to suit your taste and run `sudo make clean install` or `doas make clean install` to reflect the changes.
+If you want to add patches, you will have to manually patch them. Auto patchers are prone to issues and it is double work to fix them. Instead, it saves time and effort to manually patch them.
+### Alacritty, rofi, neovim, neofetch
+Refer to the documentation of the concerened softwares for help.
+### Pywal
 For pywal, visit https://github.com/dylanaraps/pywal/wiki/Customization for more information
 
 ## Bugs

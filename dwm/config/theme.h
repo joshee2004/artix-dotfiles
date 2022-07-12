@@ -58,7 +58,6 @@ static char termcol12[] = "#0066ff"; /* blue    */
 static char termcol13[] = "#cc00ff"; /* magenta */
 static char termcol14[] = "#00ffff"; /* cyan    */
 static char termcol15[] = "#ffffff"; /* white   */
-
 static char *termcolor[]= {
   termcol0,
   termcol1,
@@ -81,7 +80,6 @@ static char *termcolor[]= {
 /* Transparency */
 static const unsigned int baralpha    = 0xd0;
 static const unsigned int borderalpha = OPAQUE;
-
 static unsigned int alphas[][3]       = {
 	/*               fg      bg        border     */
 	[SchemeNorm] = { OPAQUE, baralpha, borderalpha },

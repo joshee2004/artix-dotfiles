@@ -61,8 +61,8 @@ static Key keys[] = {
     { MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 };
 
-/* Mousebinds */
-/* Click can be ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle, ClkClientWin, or ClkRootWin */
+/* Mousebinds
+ * Click can be ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle, ClkClientWin, or ClkRootWin */
 static Button buttons[] = {
     /* click                event mask      button          function        argument */
     { ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
