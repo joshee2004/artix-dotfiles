@@ -1,7 +1,7 @@
 # Joshua's Artix Dotfiles [dwm + custom status + alacritty + rofi]
 
 ## Info
-![dwm-rice-3](readme/dwm-rice-3.png)
+![dwm-rice-4](readme/dwm-rice-4.png)
 Dotfiles for my artix rice. Includes-
 1. [x] Xorg server, video driver and basic fonts
 2. [x] DWM (minimal window manager)
