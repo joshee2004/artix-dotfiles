@@ -43,8 +43,8 @@ Feel free to fork my project to match your distro if you don't use one of the cu
 ## Installation
 1. Make sure you have git installed. Clone the repository using git clone:
     ```git clone https://github.com/joshee2004/artix-dotfiles```
-2. cd to artix-dotfiles and run install.sh:
-    ```cd artix-dotfiles && ./install.sh```
+2. cd to artix-dotfiles-dwm and run install.sh:
+    ```cd artix-dotfiles-dwm && ./install.sh```
 3. The installer will automatically detect your package manager and install the required softwares. Enter your password and press y to confirm installing the required packages.
     ![dwm-install-1](readme/dwm-install-1.png)
 4. After that, you'll be asked to configure each software. You will have to refer to the documentation of the required softwares to configure. If you want to install everything with the default configuration, Press 6.
